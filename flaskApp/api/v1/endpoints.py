@@ -26,3 +26,8 @@ def detectSensitiveInfo():
             return jsonify({'response' : "Image is sensitive but could not blur info.", 'status' : 200})
     else :
         return send_file("outputs/blurred_image.jpg", mimetype = 'image/jpeg', as_attachment = True, download_name = "blurred_image.jpg")
+
+@v1_blueprint.route("/healthCheck", methods=['GET'])
+def healthCheck():
+    print("API is Up...")
+    return "API is Up..."
