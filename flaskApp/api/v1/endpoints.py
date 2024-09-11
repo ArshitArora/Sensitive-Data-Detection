@@ -29,5 +29,4 @@ def detectSensitiveInfo():
 
 @v1_blueprint.route("/healthCheck", methods=['GET'])
 def healthCheck():
-    print("API is Up...")
     return "API is Up..."
